@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.moving{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 25px;
+}
+.logo a{
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  font-family: Dancing Script;
+}
+nav{
+  background-color: #F1B508;
+}
+li a{
+  text-decoration: none;
+  color: black;
+  border-bottom: 4px solid transparent;
+  transition: all .55s ease;
+}
+li a:hover{
+  border-bottom: 4px solid white;
+}
+.imgtheme{
+  position: relative;
+  right: -60%;
+  bottom: -100px;
+}
+section{
+  position: relative;
+  padding: 0 10%;
+  top: -200px;
+  font-size: 22px;
+}
+h1{
+  font-family: Pacifico;
+  animation: type 5s steps(40, end) infinite;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@keyframes type{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+.opttheme a{
+  display: inline-block;
+  text-decoration: none;
+  margin: 30px;
+  text-transform: uppercase;
+  color: black;
+  background: #20C997;
+  border: 6px solid transparent;
+  border-radius: 15px;
+  transition: all .55s ease;
+}
+.opttheme a:hover{
+  background-color: transparent;
+  border: 1px solid  #99FFEB ;
+  transform: translateX(8px);
+}
+.opttheme a i{
+  vertical-align: middle;
+  padding: 5px;
+}
+.icon{
+  position: absolute;
+  top: 48%;
+  padding: 0 20px;
+  font-size: 20px;
+}
+.icon i{
+  display: block;
+  margin: 30px;
+  transition: .55s;
+}
+.icon a{
+  text-decoration: none;
+  color: blue;
+}
+.icon i:hover{
+  color: #0AC2EF;
+  transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+  .moving {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .logo a {
+    font-size: 2rem; /* Adjust logo size */
+  }
+
+  section {
+    position: relative;
+    top: 130px;
+  }
+
+  .imgtheme img {
+    position: relative;
+    width: 60%;
+    bottom: 50px;
+    text-align: center;
+    left: -200px;
+  }
+}
+
+@media (max-width: 480px) {
+  li a {
+    font-size: 0.9rem; /* Smaller font size for links */
+  }
+
+  .icon {
+    display: block; /* Stack icons vertically */
+  }
+
+  .icon i {
+    margin: 10px; /* Reduce margin for icons */
+  }
+}
